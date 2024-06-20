@@ -1,41 +1,62 @@
 [![Stand With Palestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/banner-no-action.svg)](https://thebsd.github.io/StandWithPalestine)
 
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Localization Package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A localization package for Flutter with multiple language support, providing an extensible system to manage localizations dynamically.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Multi-Language Support**:
+    - English Localization
+    - Arabic Localization
+    - Turkish Localization
 
-## Getting started
+- **Extensible Localization System**:
+    - Abstract base classes for structured localization (`BaseLocalization`, `AuthLocalization`, `ErrorLocalization`, `SettingsLocalization`, `ActionsLocalization`, etc.).
+    - Const constructors for immutable objects.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- **Dynamic Language Switching**:
+    - Support for adding new variables and methods using Dart mixins and extensions.
+
+- **Error Localization**:
+    - Common error messages and handling strategies.
+    - Extendable error messages using extensions to add new variables dynamically.
+
+- **Settings and Themes Localization**:
+    - Settings strings like `settings`, `language`, `languageDialogTitle`, `languageDialogDescription`.
+    - Theme strings like `theme`, `dark`, `light`, `system`.
+
+- **Internet Connectivity Localization**:
+    - Strings related to internet connectivity such as `noInternet`, `noInternetMessage`, `tryAgain`.
+
+- **Pages Localization**:
+    - Common page strings such as `aboutUs`, `contactUs`, `homePageTitle`, `images`, `information`, `privacyPolicy`, `products`, `profile`, `services`, `termsAndConditions`, `videos`.
+
+- **Action Localization**:
+    - Common action strings such as `ok`, `cancel`, `yes`, `no`, `save`, `delete`, `edit`, `add`, `update`, `create`, `close`, `back`, `next`, `skip`, `finish`, `confirm`, `send`, `accept`, `reject`, `submit`, `saveChanges`, `reset`, `clear`, `join`, `leave`, `subscribe`, `unsubscribe`, `follow`, `unfollow`, `like`, `unlike`, `share`, `report`.
+
+- **Search Localization**:
+    - Search-related strings such as `pleaseEnterValidCharacters`, `pleaseEnterWhatYouWantToSearch`, `pleaseEnterYourSearch`, `search`, `searchError`, `searchErrorMessage`, `searchErrorOccurred`, `searchHint`, `searchMessage`, `searchNotFound`, `searchNotFoundMessage`.
+
+## Installation
+
+To use this package, add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  localization_package: ^1.0.0
+```
+Then, run the following command in your terminal to install the package:
+
+
+
+### Then run in terminal:
+```
+flutter pub get
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
-```
+import 'package:localization_package/localization_package.dart';
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
