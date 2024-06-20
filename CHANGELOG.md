@@ -1,6 +1,14 @@
+## [1.2.1] - 2024-06-20
+### Added
+- not supported view or page localization.
+- added `notSupportedView` and `notSupportedViewMessage` to `view_localization.dart`.
+- added `page` and `pages` and `view` to `view_localization.dart`.
 
+## [1.2.0] - 2024-06-19
+### Added
+- Locale support.
 
-## [1.1.0] - 2024-06-19
+## [1.1.1] - 2024-06-19
 ### Added
 - Initial release of `localization_package`.
 - **Multi-Language Support**:

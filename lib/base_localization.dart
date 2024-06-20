@@ -10,7 +10,7 @@ part 'localizations/internet_localization.dart';
 part 'localizations/actions_localization.dart';
 part 'localizations/search_localization.dart';
 part 'localizations/settings_localization.dart';
-part  'localizations/pages_localization.dart';
+part 'localizations/view_localization.dart';
 
 
 abstract class BaseLocalization {
@@ -28,8 +28,8 @@ abstract class BaseLocalization {
   bool isValidNumbers(String value);
 
 
-  PagesLocalization? get pagesLocalization;
-  set pagesLocalization(PagesLocalization? value);
+  ViewLocalization? get pagesLocalization;
+  set pagesLocalization(ViewLocalization? value);
 
   //lang direction
   TextDirection get textDirection;

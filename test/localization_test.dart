@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:fluppy_localization/base_localization.dart';
 import 'package:fluppy_localization/languages/language_localization.dart';
 import 'package:fluppy_localization/localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 
@@ -53,12 +54,13 @@ void main() {
     /// add a new error message language and check if it's added
     test('Add a new variable to the language', () {
       controller.updateCurrentLanguage('en');
-      var language = controller.language;
       controller.getLanguageByCode("en").errorLocalization;
 
 
       controller.language.settingsLocalization?.newVariable = 'Neww Error Message';
-      print(controller.language.settingsLocalization?.newVariable);
+      if (kDebugMode) {
+        print(controller.language.settingsLocalization?.newVariable);
+      }
       expect(controller.language.settingsLocalization?.newVariable, 'Neww Error Message');
 
     });

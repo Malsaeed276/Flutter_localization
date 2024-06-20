@@ -29,7 +29,7 @@ class EnglishLocalization implements BaseLocalization {
     errorLocalization ??= EnglishErrorLocalization();
     settingsLocalization ??= EnglishSettingsLocalization();
     themeLocalization ??= EnglishThemeLocalization();
-    pagesLocalization ??= EnglishPagesLocalization();
+    pagesLocalization ??= EnglishViewLocalization();
     searchLocalization ??= EnglishSearchLocalization();
     internetLocalization ??= EnglishInternetLocalization();
   }
@@ -40,7 +40,7 @@ class EnglishLocalization implements BaseLocalization {
     AuthLocalization? auth,
     ErrorLocalization? errorLocalization,
     InternetLocalization? internetLocalization,
-    PagesLocalization? pagesLocalization,
+    ViewLocalization? pagesLocalization,
     SearchLocalization? searchLocalization,
     SettingsLocalization? settingsLocalization,
     ThemeLocalization? themeLocalization,
@@ -71,7 +71,7 @@ class EnglishLocalization implements BaseLocalization {
   InternetLocalization? internetLocalization;
 
   @override
-  PagesLocalization? pagesLocalization;
+  ViewLocalization? pagesLocalization;
 
   @override
   SearchLocalization? searchLocalization;
@@ -366,7 +366,7 @@ class EnglishInternetLocalization implements InternetLocalization {
   String tryAgain = 'Try Again';
 }
 
-class EnglishPagesLocalization implements PagesLocalization {
+class EnglishViewLocalization implements ViewLocalization {
   @override
   String aboutUs = 'About Us';
 
@@ -399,6 +399,21 @@ class EnglishPagesLocalization implements PagesLocalization {
 
   @override
   String videos = 'Videos';
+
+  @override
+  String notSupport = 'This view is not supported';
+
+  @override
+  String notSupportDescription = 'This view is not supported on this device please try another screen size or device or browser';
+
+  @override
+  String page = 'Page';
+
+  @override
+  String pages = 'Pages';
+
+  @override
+  String view = 'View';
 
 }
 

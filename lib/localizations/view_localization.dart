@@ -1,7 +1,22 @@
 
 part of '../base_localization.dart';
 
-abstract class PagesLocalization{
+abstract class ViewLocalization{
+
+  //page
+  String get page;
+  set page(String value);
+
+  // pages
+  String get pages;
+  set pages(String value);
+
+  //view
+  String get view;
+  set view(String value);
+
+
+
   // Home page
   String get homePageTitle;
   set homePageTitle(String value);
@@ -45,5 +60,13 @@ abstract class PagesLocalization{
   // information
   String get information;
   set information(String value);
+
+  // this view is not support
+  String get notSupport;
+  set notSupport(String value);
+
+  // this view is not support description
+  String get notSupportDescription;
+  set notSupportDescription(String value);
 
 }

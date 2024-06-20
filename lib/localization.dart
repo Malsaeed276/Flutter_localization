@@ -1,13 +1,21 @@
-library localization;
+library fluppy_localization;
 
 import 'package:flutter/material.dart';
-import 'package:localization/base_localization.dart';
 
+import 'base_localization.dart';
 import 'view/language_dialog.dart';
 
-
-
 class LocalizationController with ChangeNotifier {
+
+  Locale _locale = const Locale('en', 'US');
+
+  Locale get locale => _locale;
+
+  void setLocale(Locale locale) {
+    if (_locale == locale) return;
+    _locale = locale;
+    notifyListeners();
+  }
 
   List<BaseLocalization> languages;
   late BaseLocalization _language;
@@ -17,6 +25,7 @@ class LocalizationController with ChangeNotifier {
   set language(BaseLocalization value) {
     addLanguage(value);
     notifyListeners();
+    setLocale(Locale(value.languageCode));
     _language = value;
   }
 

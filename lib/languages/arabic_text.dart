@@ -29,7 +29,7 @@ class ArabicLocalization implements BaseLocalization {
     errorLocalization ??= ArabicErrorLocalization();
     settingsLocalization ??= ArabicSettingsLocalization();
     themeLocalization ??= ArabicThemeLocalization();
-    pagesLocalization ??= ArabicPagesLocalization();
+    pagesLocalization ??= ArabicViewLocalization();
     searchLocalization ??= ArabicSearchLocalization();
     internetLocalization ??= ArabicInternetLocalization();
   }
@@ -40,7 +40,7 @@ class ArabicLocalization implements BaseLocalization {
     AuthLocalization? auth,
     ErrorLocalization? errorLocalization,
     InternetLocalization? internetLocalization,
-    PagesLocalization? pagesLocalization,
+    ViewLocalization? pagesLocalization,
     SearchLocalization? searchLocalization,
     SettingsLocalization? settingsLocalization,
     ThemeLocalization? themeLocalization,
@@ -71,7 +71,7 @@ class ArabicLocalization implements BaseLocalization {
   InternetLocalization? internetLocalization;
 
   @override
-  PagesLocalization? pagesLocalization;
+  ViewLocalization? pagesLocalization;
 
   @override
   SearchLocalization? searchLocalization;
@@ -356,7 +356,7 @@ class ArabicInternetLocalization implements InternetLocalization {
   String tryAgain = 'حاول مرة أخرى';
 }
 
-class ArabicPagesLocalization implements PagesLocalization {
+class ArabicViewLocalization implements ViewLocalization {
   @override
   String aboutUs = 'معلومات عنا';
 
@@ -389,6 +389,22 @@ class ArabicPagesLocalization implements PagesLocalization {
 
   @override
   String videos = 'فيديوهات';
+
+  @override
+  String notSupport = 'هذا العرض غير مدعوم';
+
+  //'This view is not supported on this device please try another screen size or device or browser'
+  @override
+  String notSupportDescription =  'هذا العرض غير مدعوم على هذا الجهاز، يرجى تجربة حجم شاشة أخرى أو جهاز آخر أو متصفح';
+
+  @override
+  String page = 'الصفحة';
+
+  @override
+  String pages = 'الصفحات';
+
+  @override
+  String view = 'عرض';
 }
 
 class ArabicSearchLocalization implements SearchLocalization {

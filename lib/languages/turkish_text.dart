@@ -29,7 +29,7 @@ class TurkishLocalization implements BaseLocalization {
     errorLocalization ??= TurkishErrorLocalization();
     settingsLocalization ??= TurkishSettingsLocalization();
     themeLocalization ??= TurkishThemeLocalization();
-    pagesLocalization ??= TurkishPagesLocalization();
+    pagesLocalization ??= TurkishViewLocalization();
     searchLocalization ??= TurkishSearchLocalization();
     internetLocalization ??= TurkishInternetLocalization();
   }
@@ -40,7 +40,7 @@ class TurkishLocalization implements BaseLocalization {
     AuthLocalization? auth,
     ErrorLocalization? errorLocalization,
     InternetLocalization? internetLocalization,
-    PagesLocalization? pagesLocalization,
+    ViewLocalization? pagesLocalization,
     SearchLocalization? searchLocalization,
     SettingsLocalization? settingsLocalization,
     ThemeLocalization? themeLocalization,
@@ -71,7 +71,7 @@ class TurkishLocalization implements BaseLocalization {
   InternetLocalization? internetLocalization;
 
   @override
-  PagesLocalization? pagesLocalization;
+  ViewLocalization? pagesLocalization;
 
   @override
   SearchLocalization? searchLocalization;
@@ -357,7 +357,7 @@ class TurkishInternetLocalization implements InternetLocalization {
   String tryAgain = 'Tekrar Dene';
 }
 
-class TurkishPagesLocalization implements PagesLocalization {
+class TurkishViewLocalization implements ViewLocalization {
   @override
   String aboutUs = 'Hakkımızda';
 
@@ -390,6 +390,22 @@ class TurkishPagesLocalization implements PagesLocalization {
 
   @override
   String videos = 'Videolar';
+
+  @override
+  String notSupport = 'Bu görünüm desteklenmiyor';
+
+  //'This view is not supported on this device please try another screen size or device or browser';
+  @override
+  String notSupportDescription = 'Bu görünüm bu cihazda desteklenmiyor, lütfen başka bir ekran boyutu, cihaz veya tarayıcı deneyin';
+
+  @override
+  String page = 'Sayfa';
+
+  @override
+  String pages = 'Sayfalar';
+
+  @override
+  String view = 'Görüntü';
 }
 
 class TurkishSearchLocalization implements SearchLocalization {
