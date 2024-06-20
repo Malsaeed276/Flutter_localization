@@ -45,6 +45,7 @@ To use this package, add the following dependency to your `pubspec.yaml` file:
 ```yaml
 dependencies:
   localization_package: ^1.0.0
+   provider: ^6.0.0
 ```
 Then, run the following command in your terminal to install the package:
 
@@ -55,8 +56,62 @@ Then, run the following command in your terminal to install the package:
 flutter pub get
 ```
 
+## setup
+here is an example of how to setup the localization using provider
+
+```dart
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<LocalizationProvider>(
+          create: (_) => LocalizationProvider(),
+        ),
+      ],
+      child: MaterialApp(
+         title: 'Localization App',
+         home: MyHomePage(),
+      );
+  }
+}
+```
+
+
 ## Usage
+Import the package and initialize the localization:
 
 ```dart
 import 'package:localization_package/localization_package.dart';
+
+void main() {
+  // Initialize English localization
+  final englishLocalization = EnglishLocalization(appNameText: 'My App');
+
+  // Accessing general app name
+  print(englishLocalization.appName('My App')); // Output: My App
+
+  // Accessing actions localization
+  print(englishLocalization.actionsLocalization?.ok); // Output: OK
+
+  // Accessing authentication localization
+  print(englishLocalization.auth?.login); // Output: Login
+
+  // Accessing error localization
+  print(englishLocalization.errorLocalization?.errorOccurred); // Output: An error occurred
+
+  // Accessing settings localization
+  print(englishLocalization.settingsLocalization?.language); // Output: Language
+
+  // Setting and getting a new variable using extension
+  englishLocalization.settingsLocalization?.newVariable = 'New Value';
+  print(englishLocalization.settingsLocalization?.newVariable); // Output: New Value
+}
+```
+
+
 
