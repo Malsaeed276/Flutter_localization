@@ -1,6 +1,6 @@
-## 0.0.1
 
-## [1.0.0] - 2024-06-19
+
+## [1.1.0] - 2024-06-19
 ### Added
 - Initial release of `localization_package`.
 - **Multi-Language Support**:

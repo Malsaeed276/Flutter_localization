@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:localization/localization.dart';
 import 'package:provider/provider.dart';
 
+import '../localization.dart';
 import 'dialog_button.dart';
 
 

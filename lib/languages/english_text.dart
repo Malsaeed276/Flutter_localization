@@ -1,6 +1,7 @@
 import 'dart:ui';
 
-import 'package:localization/base_localization.dart';
+import '../base_localization.dart';
+
 
 class EnglishLocalization implements BaseLocalization {
 

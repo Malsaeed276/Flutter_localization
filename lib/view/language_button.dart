@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:localization/localization.dart';
 import 'package:provider/provider.dart';
+
+import '../localization.dart';
 
 class LanguageButtonWidget extends StatelessWidget {
   const LanguageButtonWidget({super.key});

@@ -1,6 +1,6 @@
-name: localization
+name: fluppy_localization
 description: "Base Localization with Provider"
-version: 0.0.1
+version: 1.1.1
 homepage: https://github.com/Malsaeed276/Flutter_localization.git
 
 environment:
@@ -17,6 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  test: ^1.25.2
 
 
 # For information on the generic Dart part of this file, see the

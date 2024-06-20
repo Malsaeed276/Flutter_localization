@@ -1,9 +1,10 @@
 import 'dart:ui';
 
+import 'package:fluppy_localization/base_localization.dart';
+import 'package:fluppy_localization/languages/language_localization.dart';
+import 'package:fluppy_localization/localization.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:localization/base_localization.dart';
-import 'package:localization/languages/language_localization.dart';
-import 'package:localization/localization.dart';
+
 
 
 void main() {
