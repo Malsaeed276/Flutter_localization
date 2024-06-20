@@ -28,8 +28,8 @@ abstract class BaseLocalization {
   bool isValidNumbers(String value);
 
 
-  ViewLocalization? get pagesLocalization;
-  set pagesLocalization(ViewLocalization? value);
+  ViewLocalization? get viewLocalization;
+  set viewLocalization(ViewLocalization? value);
 
   //lang direction
   TextDirection get textDirection;

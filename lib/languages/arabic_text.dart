@@ -20,7 +20,7 @@ class ArabicLocalization implements BaseLocalization {
     this.errorLocalization,
     this.settingsLocalization,
     this.themeLocalization,
-    this.pagesLocalization,
+    this.viewLocalization,
     this.searchLocalization,
     this.internetLocalization,
   }) {
@@ -29,7 +29,7 @@ class ArabicLocalization implements BaseLocalization {
     errorLocalization ??= ArabicErrorLocalization();
     settingsLocalization ??= ArabicSettingsLocalization();
     themeLocalization ??= ArabicThemeLocalization();
-    pagesLocalization ??= ArabicViewLocalization();
+    viewLocalization ??= ArabicViewLocalization();
     searchLocalization ??= ArabicSearchLocalization();
     internetLocalization ??= ArabicInternetLocalization();
   }
@@ -51,7 +51,7 @@ class ArabicLocalization implements BaseLocalization {
       auth: auth ?? this.auth,
       errorLocalization: errorLocalization ?? this.errorLocalization,
       internetLocalization: internetLocalization ?? this.internetLocalization,
-      pagesLocalization: pagesLocalization ?? this.pagesLocalization,
+      viewLocalization: pagesLocalization ?? this.viewLocalization,
       searchLocalization: searchLocalization ?? this.searchLocalization,
       settingsLocalization: settingsLocalization ?? this.settingsLocalization,
       themeLocalization: themeLocalization ?? this.themeLocalization,
@@ -71,7 +71,7 @@ class ArabicLocalization implements BaseLocalization {
   InternetLocalization? internetLocalization;
 
   @override
-  ViewLocalization? pagesLocalization;
+  ViewLocalization? viewLocalization;
 
   @override
   SearchLocalization? searchLocalization;
